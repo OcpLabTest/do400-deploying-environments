@@ -79,7 +79,7 @@ stage('Deploy - Stage') {
 
  environment {
 
- APP_NAMESPACE = "${RHT_OCP4_DEV_USER}-shopping-cart-stage"
+ APP_NAMESPACE = "itbvzp-shopping-cart-stage"
 
  QUAY = credentials('QUAY_USER')
 
@@ -91,7 +91,7 @@ stage('Deploy - Stage') {
  oc set image \
 
  deployment ${DEPLOYMENT_STAGE} \
- shopping-cart-stage=quay.io/${QUAY_USR}/do400-deployingenvironments:build-${BUILD_NUMBER} \
+ shopping-cart-stage=quay.io/proy05/do400-deployingenvironments:build-${BUILD_NUMBER} \
 
  -n ${APP_NAMESPACE} --record
 
