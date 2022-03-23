@@ -14,39 +14,6 @@ pipeline {
 
  stage('Tests') {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                    steps {
 
  sh './mvnw clean test'
@@ -62,11 +29,8 @@ pipeline {
  sh '''
 
  ./mvnw package -DskipTests \
-
  -Dquarkus.package.type=uber-jar
-
  '''
-
  archiveArtifacts 'target/*.jar'
 
  }
